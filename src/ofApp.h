@@ -1,6 +1,12 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxCv.h"
+#include "ofxOpenCv.h"
+#include "ofxGui.h"
+
+using namespace ofxCv;
+using namespace cv;
 
 class ofApp : public ofBaseApp{
 
@@ -20,5 +26,11 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+    
+    ofImage img;
+    Mat imgMat;
+    
+    Mat mask;
+    
+    Mat result;		
 };
