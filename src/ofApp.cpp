@@ -33,9 +33,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    drawMat(imgMat, 100, 100);
-//    drawMat(mask, img.getWidth(), 0);
+    drawMat(imgMat, 0, 0);
     drawMat(result, ofGetMouseX() - img.getWidth()/2, ofGetMouseY() - img.getHeight()/2);
+    for (const auto& x : coordinates) drawMat(result, x[0], x[1]);
 }
 
 //--------------------------------------------------------------
@@ -61,7 +61,9 @@ void ofApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
     if (button == 0) {
-        
+        int x = ofGetMouseX() - img.getWidth()/2;
+        int y = ofGetMouseY() - img.getHeight()/2;
+        coordinates.push_back({x, y});
     }
 }
 
