@@ -32,5 +32,8 @@ class ofApp : public ofBaseApp{
     
     Mat mask;
     
-    Mat result;		
+    Mat result;
+    
+    Mat alpha;
+    Mat transparent;
 };
