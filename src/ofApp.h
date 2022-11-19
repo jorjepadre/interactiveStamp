@@ -29,11 +29,7 @@ class ofApp : public ofBaseApp{
     
     ofImage img;
     Mat imgMat;
-    
     Mat mask;
-    
     Mat result;
-    
-    Mat alpha;
-    Mat transparent;
+    vector<vector<int>> coordinates;
 };
