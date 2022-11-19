@@ -35,7 +35,7 @@ void ofApp::update(){
 void ofApp::draw(){
     drawMat(imgMat, 100, 100);
 //    drawMat(mask, img.getWidth(), 0);
-    drawMat(result, 100, img.getHeight() + 100);
+    drawMat(result, ofGetMouseX() - img.getWidth()/2, ofGetMouseY() - img.getHeight()/2);
 }
 
 //--------------------------------------------------------------
